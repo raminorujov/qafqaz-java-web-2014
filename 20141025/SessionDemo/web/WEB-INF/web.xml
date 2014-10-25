@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <listener>
+        <description>HttpSessionAttributeListener</description>
+        <listener-class>sessiondemo.MySessionAttributeListener</listener-class>
+    </listener>
+    <listener>
+        <description>ServletContextListener</description>
+        <listener-class>sessiondemo.MyContextletListener</listener-class>
+    </listener>
     <servlet>
         <servlet-name>SessionInfo</servlet-name>
         <servlet-class>sessiondemo.SessionInfo</servlet-class>
@@ -8,6 +16,22 @@
         <servlet-name>DataServlet</servlet-name>
         <servlet-class>sessiondemo.DataServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Servlet1</servlet-name>
+        <servlet-class>sessiondemo.Servlet1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Servlet2</servlet-name>
+        <servlet-class>sessiondemo.Servlet2</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Servlet3</servlet-name>
+        <servlet-class>sessiondemo.Servlet3</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Servlet4</servlet-name>
+        <servlet-class>sessiondemo.Servlet4</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SessionInfo</servlet-name>
         <url-pattern>/SessionInfo</url-pattern>
@@ -15,6 +39,22 @@
     <servlet-mapping>
         <servlet-name>DataServlet</servlet-name>
         <url-pattern>/DataServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Servlet1</servlet-name>
+        <url-pattern>/Servlet1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Servlet2</servlet-name>
+        <url-pattern>/Servlet2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Servlet3</servlet-name>
+        <url-pattern>/Servlet3</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Servlet4</servlet-name>
+        <url-pattern>/Servlet4</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

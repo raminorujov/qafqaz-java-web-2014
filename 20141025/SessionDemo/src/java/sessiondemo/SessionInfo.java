@@ -50,6 +50,8 @@ public class SessionInfo extends HttpServlet {
                 out.println(name + " = " + session.getAttribute(name) + "<br/>");
             }
             
+            
+            
             out.println("</body>");
             out.println("</html>");
         } finally {

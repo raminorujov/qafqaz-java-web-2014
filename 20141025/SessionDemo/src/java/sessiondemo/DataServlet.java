@@ -52,17 +52,20 @@ public class DataServlet extends HttpServlet {
             
           String action = request.getParameter("action");
            
-            if (action.equals("add"))
+          
+          if (action != null && action.equals("add"))
             {
                 String  name = request.getParameter("name");
                 String  value = request.getParameter("value");
                 session.setAttribute(name ,value);
                 
             }
-            else if (action.equals("delete"))
+            else if (action != null && action.equals("delete"))
             {
                 String  name = request.getParameter("name");
                 session.removeAttribute(name);
+            } else if(action != null && action.equals("logout")) {
+                session.invalidate();
             }
             
             out.println("</body>");

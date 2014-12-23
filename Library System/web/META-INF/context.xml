@@ -1,2 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context antiJARLocking="true" path="/library"/>
+<Context antiJARLocking="true" path="/library">
+
+<Resource name="jdbc/librarydb" 
+          auth="Container"
+          type="javax.sql.DataSource" 
+          driverClassName="oracle.jdbc.OracleDriver"
+          url="jdbc:oracle:thin:@fsdb.formspideronline.com:1521:awsdb"
+          username="SCHEMA_2586" 
+          password="UCXSSJCXCW" 
+          maxActive="10" 
+          maxIdle="10"
+          maxWait="-1"/>
+
+</Context>
